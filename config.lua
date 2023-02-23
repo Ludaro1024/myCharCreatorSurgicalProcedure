@@ -1,5 +1,5 @@
 Config = {}
-Config.Debug = false
+Config.Debug = true
 Config.Locale = "de" 
 Config.Price =  20 -- nil for free!
 Config.Account = "both"-- "money", "bank", or "both"
