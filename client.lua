@@ -26,7 +26,6 @@ function onEnter(self)
     debug('entered zone ' .. self.id)
     hasenoughmoney = lib.callback.await('ludaro:getprice', false)
     debug(hasenoughmoney)
-    
 end
 
 function onExit(self)
@@ -42,6 +41,7 @@ function insideZone(self)
                 if hasenoughmoney == true then
                     openmenu()
                     notify(string.format(Translation[Config.Locale]["done"], Config.Price))
+                    TriggerServerEvent("ludaro:removeprice")
                 else
                  
                     notify(string.format(Translation[Config.Locale]["notenough"], Config.Price))
