@@ -2,7 +2,7 @@ Config = {}
 Config.Debug = true
 Config.Locale = "de" 
 Config.Price =  20 -- nil for free!
-Config.Account = "both"-- "money", "bank", or "both"
+Config.Account = "money"-- "money", "bank", or "both"
 
 Config.Coords = {  -- https://docs.fivem.net/docs/game-references/blips/ -- https://docs.fivem.net/docs/game-references/markers/  
     { 
