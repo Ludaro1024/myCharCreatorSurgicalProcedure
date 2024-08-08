@@ -19,7 +19,14 @@ end
 local hasenoughmoney
 function openmenu()
     debug("opening menu..")
-    TriggerEvent(Config.Event)
+    ESX.TriggerServerCallback('esx_skin:getPlayerSkin', function(skin, jobSkin)
+        if skin ~= nil then
+            TriggerEvent(Config.Event) 
+            Wait(2000)
+              TriggerEvent('skinchanger:loadSkin', skin)
+        end
+    end)
+    Wait(2000)
 end
 function onEnter(self)
     textuistart(Translation[Config.Locale]["textui"])
